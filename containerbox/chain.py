@@ -133,9 +133,9 @@ class Chain:
     def len(self):
         return self.__size
 
-    # internal method  index_of returns the number of the first node with the given data.
-    # Returns 0 if the data is not found.
-    def index_of(self, data):
+    # Return the index of the first node with the given data.
+    # Returns -1 if the data is not found.
+    def index(self, data):
         idx = 0
         node = self.__head
         while node is not None:
@@ -143,7 +143,8 @@ class Chain:
                 return idx
             idx += 1
             node = node.get_next()
-        return 0
+        # not found: indicated by -1
+        return -1
 
     # remove a given node from the list
     def _remove_node(self, node):
@@ -188,6 +189,9 @@ class Chain:
             node = next_node
 
     def prepend(self, data):
+        """
+        Add a data node to the beginning of the list.
+        """
         new_node = _DlNode(data)
         new_node.set_next(self.__head)
         if self.__head is None:
@@ -198,6 +202,9 @@ class Chain:
         self.__size += 1
 
     def append(self, data):
+        """
+        Add a data node to the end of the list.
+        """
         new_node = _DlNode(data)
         new_node.set_prev(self.__tail)
         if self.__tail is None:
