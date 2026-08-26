@@ -17,7 +17,7 @@ mylist.append(2)
 print("len after prepend and append:", mylist.len())
 
 
-print("position of first node with 1:", mylist.index_of(1))
+print("position of first node with 1:", mylist.index(1))
 print("number of 1's in the list", mylist.count(1))
 
 mylist.remove_all(1)
