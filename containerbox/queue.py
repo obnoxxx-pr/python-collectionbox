@@ -1,5 +1,6 @@
 from containerbox import Chain
 
+
 class Queue:
     def __init__(self):
         self._chain = Chain()
