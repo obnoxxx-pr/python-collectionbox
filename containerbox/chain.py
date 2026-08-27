@@ -162,8 +162,16 @@ class Chain:
             following.set_prev(previous)
         self.__size -= 1
 
-    # remove removes the first node with the given data.
+    def remove_at(self, index):
+        """
+        remove node at given index
+        """
+        self._remove_node(self._get_node(index))
+
     def remove(self, data):
+        """
+        remove removes the first node with the given data.
+        """
         node = self.__head
         while node is not None and node.get_data() != data:
             node = node.get_next()
