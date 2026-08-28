@@ -21,3 +21,6 @@ class Stack:
 
     def peek(self):
         return self._chain[0]
+
+    def __repr__(self):
+        return f"Stack({list(self._chain)})"
