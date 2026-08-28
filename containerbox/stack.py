@@ -9,13 +9,15 @@ class Stack:
         self._chain.prepend(item)
 
     def pop(self):
-        return self._chain.remove_at(0)
+        val = self._chain[0]
+        self._chain.remove_at(0)
+        return val
 
     def __len__(self):
         return len(self._chain)
 
-    def __bool(self):
+    def __bool__(self):
         return len(self) > 0
 
     def peek(self):
-        return self._chain.get_head()
+        return self._chain[0]

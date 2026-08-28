@@ -2,11 +2,15 @@
 from containerbox import Stack
 
 s = Stack()
+print("length of new stack:", len(s))
 
 s.push(1)
+print("pushed", s.peek())
 s.push(2)
-print("length:", len(s))
-print("at top:", s.pop())
-s.pop()
+print("pushed", s.peek())
+print("length after two pushes:", len(s))
+print("pop from top:", s.pop())
 print("length after pop:", len(s))
-print("new top:", s.peek())
+print("peek top(without pop):", s.peek())
+print("pop again:", s.pop())
+print("length now:", len(s))
