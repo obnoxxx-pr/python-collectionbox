@@ -28,7 +28,7 @@ mylist.append(1)
 print("len after removing all nodes with 1:", mylist.len())
 
 
-print("all itemsin list:")
+print("all items in list:")
 
 num = 0
 for item in mylist:
