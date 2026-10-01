@@ -1,11 +1,50 @@
 # python collectionbox
 
-The collectionbox package is a pure-Python collection of educational yet production-usable
-collection data structures with clean, pythonic APIs.
+## What is collectionbox?
+
+`collectionbox` is a pure-Python library package of educational yet production-usable
+collection-type data structures with clean, Pythonic APIs.
+
+collectionbox currently provides the classes
+`Chain`, `Stack`, `Queue`, `SortedChain`, and `Set`.
+More details about each class are given below.
 
 This project started as a learning exercise in
 object oriented python programming and data structure types.
 It is growing and evolving as additional types are being added.
+
+## Why collectionbox?
+
+Python already provides excellent built-in collection types such as
+`list`, `dict`, and `set`. For most applications, these remain the
+recommended choice.
+
+collectionbox is not intended to replace Python's native collections.
+Instead, it provides a collection framework with a focus on
+consistent, uniform, and explicitly object-oriented APIs.
+Its goal is to offer consistent
+interfaces and behavior across different collection types while
+remaining easy to understand, extend, and experiment with.
+
+Unlike wrapper libraries built on top of Python's existing collection
+implementations, collectionbox implements its own data structures
+from scratch in pure Python.
+
+This makes the project useful as an educational tool and
+as a platform for exploring collection abstractions and data structure
+design.
+
+Because the library is implemented entirely in Python, it may not match
+the performance of Python's highly optimized built-in collections.
+Performance is therefore not the primary objective. Instead, the focus
+is on API consistency, clarity, object-oriented design, and ease of
+experimentation.
+
+The project is still evolving. In particular, hash tables and map
+(dictionary) types are not yet available, so collectionbox should
+currently be regarded as incomplete.
+
+## What is in the collectionbox?
 
 So far, the package provides five basic collection classes:
 
@@ -15,7 +54,7 @@ So far, the package provides five basic collection classes:
 - `SortedChain`, a sorted (doubly) linked list.
 - `Set`, an insertion-ordered collection of unique values based on `Chain`.
 
-## Chain
+### Chain
 
 `Chain` is a list-type collection class that is implemented as a
 doubly linked list for storing values (data items) of any type.
@@ -56,7 +95,7 @@ lst.add(1)
 ...
 ```
 
-## Stack
+### Stack
 
 `Stack` implements a stack (LIFO) data structure based on `Chain`.
 
@@ -95,7 +134,7 @@ print(s)
 
 ```
 
-## Queue
+### Queue
 
 `Queue` implements a queue data structure (FIFO) based on `Chain`.
 
@@ -133,12 +172,12 @@ q.dequeue()
 
 ```
 
-## SortedChain
+### SortedChain
 
 `SortedChain` implements a sorted list as a doubly linked list. Values added
 to the collection are kept in ascending order, including duplicate values.
 
-`SortedChain(value)` initializes a chain containing `value` as the only enrty
+`SortedChain(value)` initializes a chain containing `value` as the only entry
 
 `SortedChain` offers the following methods:
 
@@ -184,7 +223,7 @@ print(chain.last())  # 7
 
 ```
 
-## Set
+### Set
 
 `Set` stores unique values using a `Chain`. Values retain their insertion
 order when iterated, unlike Python's built-in `set`, whose iteration order is
